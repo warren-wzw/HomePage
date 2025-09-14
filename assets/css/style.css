@@ -16,16 +16,7 @@
 \*-----------------------------------*/
 
 :root {
-  
-  body {
-    background: var(--bg-gradient-onyx);
-  }
 
-  .timeline-text ul {
-    background: var(--bg-gradient-yellow-1);
-    padding: 1rem;
-    border-radius: 8px;
-  }
   /**
    * colors
    */
