@@ -1499,6 +1499,23 @@ textarea.form-input::-webkit-resizer { display: none; }
   }
 
   .skills-item:not(:last-child) { margin-bottom: 25px; }
+  /**/
+  .timeline-item {
+    display: flex;           /* 水平排列子元素 */
+    align-items: flex-start; /* 顶部对齐 */
+    gap: 15px;               /* 图标和文字间距 */
+  }
+
+  .timeline-logo img {
+    width: 60px;             /* 图标大小，可按需调整 */
+    height: 60px;
+    object-fit: contain;
+  }
+
+  .timeline-content {
+    flex: 1;                 /* 占满剩余空间 */
+  }
+  /**/
 
 
 
