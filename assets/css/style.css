@@ -1507,8 +1507,8 @@ textarea.form-input::-webkit-resizer { display: none; }
   }
 
   .timeline-logo img {
-    width: 60px;             /* 图标大小，可按需调整 */
-    height: 60px;
+    width: 80px;             /* 图标大小，可按需调整 */
+    height: 80px;
     object-fit: contain;
   }
 
