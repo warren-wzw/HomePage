@@ -30,12 +30,13 @@ Contact
 
 # about
 
-About me
+👋 Hello, welcome to my homepage!
 
-I'm Creative Director and UI/UX Designer from Sydney, Australia, working in web development and print media. I enjoy turning complex problems into simple, beautiful and intuitive designs.
+My name is Warren (Wang Zhiwei), and I am currently a Ph.D. candidate at Zhejiang University of Technology. My research primarily focuses on multi-modal image fusion and perception, as well as their efficient deployment on embedded systems for real-world applications.
 
-My job is to build your website so that it is functional and user-friendly but at the same time attractive. Moreover, I add personal touch to your product and make sure that is eye-catching and easy to use. My aim is to bring across your message and identity in the most creative way. I created web design for many famous brand companies.
+🌱 My Github [warren-wzw](https://github.com/warren-wzw)
 
+📚 My CSDN Blog [warren@伟](https://blog.csdn.net/warren103098?type=blog)
 
 ## service
 
