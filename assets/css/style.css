@@ -1889,6 +1889,13 @@ textarea.form-input::-webkit-resizer { display: none; }
   .social-list { justify-content: center; }
 
 
+  .contact-info .contact-link {
+  font-size: 14px;         /* 这里生效 */
+  white-space: nowrap;     /* 不换行 */
+  overflow: hidden;        /* 超出隐藏 */
+  text-overflow: ellipsis; /* 超出显示省略号 */
+  }
+
 
   /**
 	 * RESUME
