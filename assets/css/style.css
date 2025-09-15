@@ -1499,7 +1499,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   }
 
   .skills-item:not(:last-child) { margin-bottom: 25px; }
-  /**/
+  /*slef add*/
   .timeline-item {
     display: flex;           /* 水平排列子元素 */
     align-items: flex-start; /* 顶部对齐 */
