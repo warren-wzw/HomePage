@@ -617,7 +617,6 @@
       </article>
 
       <script>
-        // ✅ 修改为你的 GitHub 用户名和仓库名
         const projects = [
           { user: "warren-wzw", repo: "Algorithm-deployment-template-of-each-platform" },
         ];
@@ -632,6 +631,16 @@
                 const res = await fetch(`https://api.github.com/repos/${user}/${repo}`);
                 const data = await res.json();
 
+                // ✅ 加错误处理
+                if (data.message === "Not Found") {
+                  return `
+                    <div class="project-card error">
+                      <h3>❌ ${user}/${repo}</h3>
+                      <p>Repository not found. Please check the name.</p>
+                    </div>
+                  `;
+                }
+
                 return `
                   <div class="project-card">
                     <h3 class="project-title">
@@ -639,7 +648,7 @@
                     </h3>
                     <p class="project-desc">${data.description || "No description provided."}</p>
                     <div class="project-stats">
-                      ⭐ ${data.stargazers_count} &nbsp;&nbsp; 🍴 ${data.forks_count}
+                      ⭐ ${data.stargazers_count ?? 0} &nbsp;&nbsp; 🍴 ${data.forks_count ?? 0}
                     </div>
                   </div>
                 `;
