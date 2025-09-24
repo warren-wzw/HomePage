@@ -186,6 +186,10 @@
             <button class="navbar-link" data-nav-link>Publications</button>
           </li>
 
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Projects</button>
+          </li>
+
         </ul>
 
       </nav>
@@ -602,7 +606,95 @@
       <!--
         - #Projects
       -->
+      <article class="portfolio" data-page="projects">
+        <header>
+          <h2 class="h2 article-title">Projects</h2>
+        </header>
 
+        <section class="projects">
+          <div id="github-projects" class="project-cards"></div>
+        </section>
+      </article>
+
+      <script>
+        // ✅ 修改为你的 GitHub 用户名和仓库名
+        const projects = [
+          { user: "warren-wzw", repo: " Algorithm-deployment-template-of-each-platform" },
+        ];
+
+        async function loadGitHubProjects() {
+          const container = document.getElementById("github-projects");
+          container.innerHTML = "<p>Loading projects...</p>";
+
+          try {
+            const cards = await Promise.all(
+              projects.map(async ({ user, repo }) => {
+                const res = await fetch(`https://api.github.com/repos/${user}/${repo}`);
+                const data = await res.json();
+
+                return `
+                  <div class="project-card">
+                    <h3 class="project-title">
+                      <a href="${data.html_url}" target="_blank">${data.name}</a>
+                    </h3>
+                    <p class="project-desc">${data.description || "No description provided."}</p>
+                    <div class="project-stats">
+                      ⭐ ${data.stargazers_count} &nbsp;&nbsp; 🍴 ${data.forks_count}
+                    </div>
+                  </div>
+                `;
+              })
+            );
+
+            container.innerHTML = cards.join("");
+          } catch (e) {
+            container.innerHTML = "<p>⚠️ Failed to load GitHub projects.</p>";
+            console.error(e);
+          }
+        }
+
+        loadGitHubProjects();
+      </script>
+
+      <style>
+        .project-cards {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+          gap: 1.5rem;
+          margin-top: 1rem;
+        }
+
+        .project-card {
+          padding: 1.5rem;
+          border-radius: 1rem;
+          background: #f8f9fa;
+          box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+          transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .project-card:hover {
+          transform: translateY(-4px);
+          box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+        }
+
+        .project-title a {
+          font-size: 1.4rem;
+          color: #ff7675;
+          text-decoration: none;
+          font-weight: bold;
+        }
+
+        .project-desc {
+          color: #555;
+          margin: 0.6rem 0 1rem;
+        }
+
+        .project-stats {
+          font-weight: 600;
+          color: #333;
+        }
+      </style>
+      <!--Other--->
       <article class="portfolio" data-page="Others">
         <header>
           <h2 class="h2 article-title">Others</h2>
