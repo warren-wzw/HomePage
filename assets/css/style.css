@@ -1914,3 +1914,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   min-height: auto !important;
   height: auto !important;
 }
+
+html {
+  scroll-behavior: smooth;
+}
