@@ -1811,7 +1811,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .sidebar, article { width: auto; }
 
-  article { min-height: 100%; }
+  article { min-height: auto; }
 
 
 
@@ -1908,4 +1908,9 @@ textarea.form-input::-webkit-resizer { display: none; }
     transform: scale(1.05);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   }
+}
+
+.main-content article {
+  min-height: auto !important;
+  height: auto !important;
 }
