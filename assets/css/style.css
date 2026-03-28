@@ -1919,6 +1919,6 @@ html {
   scroll-behavior: smooth;
 }
 
-nav a {
-  display: inline-block;
+.bio {
+  white-space: normal;
 }
