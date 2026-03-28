@@ -1918,3 +1918,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 html {
   scroll-behavior: smooth;
 }
+
+nav a {
+  display: inline-block;
+}
