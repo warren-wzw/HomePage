@@ -1418,8 +1418,8 @@ textarea.form-input::-webkit-resizer { display: none; }
   }
 
   .content-card {
-    padding: 30px;
-    padding-top: 25px;
+    padding: 15px;
+    padding-top: 15px;
   }
 
   .testimonials-avatar-box {
@@ -1498,7 +1498,7 @@ textarea.form-input::-webkit-resizer { display: none; }
     left: -43px;
   }
 
-  .skills-item:not(:last-child) { margin-bottom: 25px; }
+  .skills-item:not(:last-child) { margin-bottom: 15px; }
   /*slef add*/
   .timeline-item {
     display: flex;           /* 水平排列子元素 */
