@@ -797,7 +797,6 @@ main {
 }
 
 .reviewer-info {
-  width: 100%;
   margin-top: 18px;
   text-align: center;
   line-height: 1.55;
@@ -806,8 +805,6 @@ main {
 .reviewer-info h3,
 .reviewer-info p,
 .reviewer-info span {
-  display: block;
-  width: 100%;
   color: var(--white-1) !important;
   text-align: center !important;
 }
