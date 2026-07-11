@@ -913,7 +913,20 @@ main {
 
 .skills-title { margin-bottom: 10px; }
 
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  align-items: start;
+}
+
 .skills-list { padding: 15px; }
+
+@media (max-width: 767px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
 
 .skills-item:not(:last-child) { margin-bottom: 15px; }
