@@ -506,6 +506,20 @@ main {
 
 .about-text p { margin-bottom: 15px; }
 
+.about-text .news-title {
+  color: var(--white-2);
+  font-family: var(--ff-poppins);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-600);
+}
+
+.about-text .news-item {
+  font-family: var(--ff-poppins);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+  line-height: 1.6;
+}
+
 
 
 /**
