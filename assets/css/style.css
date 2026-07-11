@@ -1826,6 +1826,27 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
+@media (min-width: 900px) {
+  #publications .blog-posts-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+  }
+
+  #publications .blog-banner-box { height: 150px; }
+
+  #publications .blog-content { padding: 18px; }
+
+  #publications .blog-item-title {
+    font-size: 18px;
+    line-height: 1.35;
+  }
+
+  #publications .blog-meta :is(.blog-category, time) {
+    font-size: var(--fs-7);
+  }
+}
+
+
 /**
  * responsive larger than 1024px screen
  */
