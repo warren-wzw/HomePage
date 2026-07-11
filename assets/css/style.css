@@ -916,18 +916,17 @@ main {
 .skills-list { padding: 15px; }
 
 .skills-summary {
-  display: grid;
-  grid-template-columns: 1fr 1fr 2fr;
-  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
   width: 100%;
-  padding: 15px;
+  padding: 16px 20px;
   color: var(--light-gray);
   font-size: var(--fs-6);
 }
 
-.skills-summary p:nth-child(2) { text-align: center; }
-
-.skills-summary p:last-child { text-align: right; }
+.skills-summary p { white-space: nowrap; }
 
 .skills-summary strong {
   color: var(--white-2);
@@ -935,15 +934,16 @@ main {
 }
 
 .skills-accent {
-  color: #ff7675;
+  color: var(--orange-yellow-crayola);
   font-weight: var(--fw-500);
 }
 
-@media (max-width: 600px) {
-  .skills-summary { grid-template-columns: 1fr; }
-
-  .skills-summary p:nth-child(2),
-  .skills-summary p:last-child { text-align: left; }
+@media (max-width: 700px) {
+  .skills-summary {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
 }
 
 
