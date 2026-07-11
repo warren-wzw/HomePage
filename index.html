@@ -187,11 +187,7 @@
           </li>
 
           <li class="navbar-item">
-            <a class="navbar-link" href="#projects">Projects</a>
-          </li>
-
-          <li class="navbar-item">
-            <a class="navbar-link" href="#blogs">Blogs</a>
+            <a class="navbar-link" href="#blogs">Technical Writing</a>
           </li>
 
         </ul>
@@ -322,8 +318,8 @@
                 <h4 class="h4 timeline-item-title">Zhejiang University of Technology</h4>
                 <!-- <span>2022 — Present</span> -->
                 <p class="timeline-text">
-                  <b>Ph.D. Candidate in Control Science and Engineering</b><br>
                   Master-Ph.D. Integrated Program<br>
+                  <b>Ph.D. Candidate in Control Science and Engineering</b><br>
                   <strong>Research Interests: </strong>Multimodal Information Fusion and Perception
                 </p>
               </div>
@@ -721,146 +717,11 @@
       </article>
 
       <!--
-        - #Projects
-      -->
-      <article id="projects" class="portfolio active">
-        <header>
-          <h2 class="h2 article-title">Projects</h2>
-        </header>
-
-        <section class="projects">
-          <div id="github-projects" class="project-cards"></div>
-        </section>
-      </article>
-
-      <script>
-        //please add github projects here
-        const projects = [
-          { user: "warren-wzw", repo: "Algorithm-deployment-template-of-each-platform" },
-          { user: "warren-wzw", repo: "DiFusionSeg" },
-          { user: "warren-wzw", repo: "IMO" },
-          { user: "warren-wzw", repo: "MAUGIF" },
-        ];
-
-        //
-
-        async function loadGitHubProjects() {
-          const container = document.getElementById("github-projects");
-          container.innerHTML = "<p>Loading projects...</p>";
-
-          try {
-            const cards = await Promise.all(
-              projects.map(async ({ user, repo }) => {
-                const res = await fetch(`https://api.github.com/repos/${user}/${repo}`);
-                const data = await res.json();
-
-                // ✅ 加错误处理
-                if (data.message === "Not Found") {
-                  return `
-                    <div class="project-card error">
-                      <h3>❌ ${user}/${repo}</h3>
-                      <p>Repository not found. Please check the name.</p>
-                    </div>
-                  `;
-                }
-
-                return `
-                  <div class="project-card">
-                    <h3 class="project-title">
-                      <a href="${data.html_url}" target="_blank">${data.name}</a>
-                    </h3>
-                    <p class="project-desc">${data.description || "No description provided."}</p>
-                    <div class="project-stats">
-                      ⭐ ${data.stargazers_count ?? 0} &nbsp;&nbsp; 🍴 ${data.forks_count ?? 0}
-                    </div>
-                  </div>
-                `;
-              })
-            );
-
-            container.innerHTML = cards.join("");
-          } catch (e) {
-            container.innerHTML = "<p>⚠️ Failed to load GitHub projects.</p>";
-            console.error(e);
-          }
-        }
-
-        loadGitHubProjects();
-      </script>
-
-      <style>
-        .project-cards {
-          display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-          gap: 1.5rem;
-          margin-top: 1rem;
-        }
-
-        .project-card {
-          padding: 1.5rem;
-          border-radius: 1rem;
-          background: #212830;
-          box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-          transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .project-card:hover {
-          transform: translateY(-4px);
-          box-shadow: 0 6px 14px rgba(0,0,0,0.12);
-        }
-
-        .project-title a {
-          font-size: 1.4rem;
-          color: #478BE6;
-          text-decoration: none;
-          font-weight: bold;
-        }
-
-        .project-desc {
-          color: #5b5a5a;
-          margin: 0.3rem 0 1rem;
-        }
-
-        .project-stats {
-          font-weight: 600;
-          color: #ffffff;
-        }
-      </style>
-      <!--Other--->
-      <article class="portfolio" data-page="Others">
-        <header>
-          <h2 class="h2 article-title">Others</h2>
-        </header>
-        <section class="projects">
-          <ul class="filter-list">
-            <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
-            </li>
-          </ul>
-          <div class="filter-select-box">
-            <button class="filter-select" data-select>
-              <div class="select-value" data-selecct-value>Select category</div>
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
-            </button>
-            <ul class="select-list">
-              <li class="select-item">
-                <button data-select-item>All</button>
-              </li>
-            </ul>
-          </div>
-          <ul class="project-list">
-          </ul>
-        </section>
-      </article>
-      
-      <!--
-        - #Blogs
+        - #Technical Writing
       -->
       <article id="blogs" class="blog active">
         <header>
-          <h2 class="h2 article-title">Blogs</h2>
+          <h2 class="h2 article-title">Technical Writing</h2>
         </header>
         <section class="blog-posts">
           <ul class="blog-posts-list">
