@@ -511,6 +511,30 @@ main {
   font-family: var(--ff-poppins);
   font-size: var(--fs-6);
   font-weight: var(--fw-600);
+  margin-bottom: 10px;
+}
+
+.news-list {
+  display: grid;
+  gap: 12px;
+  max-height: calc(4.8em + 24px);
+  padding-right: 10px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: var(--orange-yellow-crayola) var(--jet);
+}
+
+.news-list::-webkit-scrollbar { width: 5px; }
+
+.news-list::-webkit-scrollbar-track {
+  background: var(--jet);
+  border-radius: 5px;
+}
+
+.news-list::-webkit-scrollbar-thumb {
+  background: var(--orange-yellow-crayola);
+  border-radius: 5px;
 }
 
 .about-text .news-item {
@@ -518,6 +542,7 @@ main {
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
   line-height: 1.6;
+  margin-bottom: 0;
 }
 
 
