@@ -1832,14 +1832,34 @@ textarea.form-input::-webkit-resizer { display: none; }
     gap: 22px;
   }
 
+  #publications .blog-post-item,
+  #publications .blog-card { height: 100%; }
+
+  #publications .blog-card {
+    display: flex;
+    flex-direction: column;
+  }
+
   #publications .blog-banner-box { height: 150px; }
 
-  #publications .blog-content { padding: 18px; }
+  #publications .blog-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 18px;
+  }
+
+  #publications .blog-meta {
+    align-items: flex-start;
+    min-height: 44px;
+  }
 
   #publications .blog-item-title {
     font-size: 18px;
     line-height: 1.35;
   }
+
+  #publications .blog-text { margin-top: auto; }
 
   #publications .blog-meta :is(.blog-category, time) {
     font-size: var(--fs-7);
