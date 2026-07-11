@@ -1257,6 +1257,7 @@ main {
 }
 
 .blog-meta .dot {
+  flex: 0 0 4px;
   background: var(--light-gray-70);
   width: 4px;
   height: 4px;
@@ -1850,7 +1851,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   }
 
   #publications .blog-meta {
-    align-items: flex-start;
+    align-items: center;
     min-height: 44px;
   }
 
