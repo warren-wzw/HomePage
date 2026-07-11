@@ -913,19 +913,20 @@ main {
 
 .skills-title { margin-bottom: 10px; }
 
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px;
-  align-items: start;
-}
-
 .skills-list { padding: 15px; }
 
-@media (max-width: 767px) {
-  .skills-grid {
-    grid-template-columns: 1fr;
-  }
+.skills-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 28px;
+  padding: 15px;
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+}
+
+.skills-summary strong {
+  color: var(--white-2);
+  font-weight: var(--fw-500);
 }
 
 
