@@ -116,40 +116,52 @@
 [data-theme="light"] {
   --bg-gradient-onyx: linear-gradient(
     to bottom right,
-    hsl(0, 0%, 100%) 3%,
-    hsl(220, 20%, 94%) 97%
+    #ffffff 3%,
+    #f1f5f9 97%
   );
   --bg-gradient-jet: linear-gradient(
     to bottom right,
-    hsla(220, 20%, 86%, 0.45) 0%,
-    hsla(0, 0%, 100%, 0) 100%
-  ), hsl(0, 0%, 99%);
+    rgba(226, 232, 240, 0.42) 0%,
+    rgba(255, 255, 255, 0) 100%
+  ), #ffffff;
+  --bg-gradient-yellow-1: linear-gradient(
+    to bottom right,
+    #3b82f6 0%,
+    rgba(37, 99, 235, 0.14) 58%
+  );
   --bg-gradient-yellow-2: linear-gradient(
     135deg,
-    hsla(45, 100%, 55%, 0.24) 0%,
-    hsla(35, 100%, 68%, 0) 59.86%
-  ), hsl(0, 0%, 99%);
+    rgba(59, 130, 246, 0.15) 0%,
+    rgba(37, 99, 235, 0) 59.86%
+  ), #ffffff;
   --border-gradient-onyx: linear-gradient(
     to bottom right,
-    hsl(220, 16%, 82%) 0%,
-    hsla(220, 16%, 82%, 0.25) 50%
+    #dbe3ee 0%,
+    rgba(219, 227, 238, 0.3) 55%
   );
-  --jet: hsl(220, 14%, 84%);
-  --onyx: hsl(220, 20%, 93%);
-  --eerie-black-1: hsl(0, 0%, 100%);
-  --eerie-black-2: hsl(220, 25%, 98%);
-  --smoky-black: hsl(220, 24%, 94%);
-  --white-1: hsl(220, 30%, 13%);
-  --white-2: hsl(220, 28%, 16%);
-  --light-gray: hsl(220, 14%, 30%);
-  --light-gray-70: hsla(220, 14%, 30%, 0.75);
-  --link-accent: hsl(355, 66%, 42%);
-  --navbar-bg: hsla(0, 0%, 100%, 0.82);
-  --shadow-1: -4px 8px 24px hsla(220, 25%, 20%, 0.08);
-  --shadow-2: 0 16px 30px hsla(220, 25%, 20%, 0.09);
-  --shadow-3: 0 16px 40px hsla(220, 25%, 20%, 0.09);
-  --shadow-4: 0 25px 50px hsla(220, 25%, 20%, 0.08);
-  --shadow-5: 0 24px 80px hsla(220, 25%, 20%, 0.1);
+  --text-gradient-yellow: linear-gradient(
+    to right,
+    #2563eb,
+    #60a5fa
+  );
+  --jet: #dfe5ec;
+  --onyx: #f1f5f9;
+  --eerie-black-1: #ffffff;
+  --eerie-black-2: #ffffff;
+  --smoky-black: #f6f7f9;
+  --white-1: #0f172a;
+  --white-2: #111827;
+  --orange-yellow-crayola: #2563eb;
+  --vegas-gold: #2563eb;
+  --light-gray: #475569;
+  --light-gray-70: rgba(71, 85, 105, 0.72);
+  --link-accent: #2563eb;
+  --navbar-bg: rgba(255, 255, 255, 0.92);
+  --shadow-1: 0 8px 24px rgba(15, 23, 42, 0.06);
+  --shadow-2: 0 12px 28px rgba(15, 23, 42, 0.08);
+  --shadow-3: 0 16px 36px rgba(15, 23, 42, 0.08);
+  --shadow-4: 0 20px 44px rgba(15, 23, 42, 0.07);
+  --shadow-5: 0 20px 54px rgba(15, 23, 42, 0.08);
 }
 
 
@@ -237,6 +249,13 @@ body {
 
 [data-theme="light"] .theme-toggle__moon { display: block; }
 
+[data-theme="light"] .theme-toggle {
+  color: #ffffff;
+  background: #2563eb;
+  border-color: #2563eb;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.24);
+}
+
 [data-theme="light"] [style*="color:#ffffff"],
 [data-theme="light"] [style*="color: #ffffff"] { color: var(--white-2) !important; }
 
@@ -248,7 +267,11 @@ body {
 
 [data-theme="light"] [style*="color:#ff7675"] { color: var(--link-accent) !important; }
 
+[data-theme="light"] [style*="color:#f3dc8a"] { color: var(--orange-yellow-crayola) !important; }
+
 [data-theme="light"] img[src*="simpleicons.org/github/ffffff"] { filter: invert(1); }
+
+[data-theme="light"] .reviewer-logo { background: #ffffff; }
 
 
 
@@ -1976,7 +1999,7 @@ textarea.form-input::-webkit-resizer { display: none; }
    * CUSTOM PROPERTY
    */
 
-  :root {
+  :root:not([data-theme="light"]) {
 
     /**
     * shadow
