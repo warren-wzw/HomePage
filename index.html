@@ -5,7 +5,16 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark light">
   <title>Warren(王志伟)</title>
+
+  <script>
+    try {
+      if (localStorage.getItem('theme') === 'light') {
+        document.documentElement.dataset.theme = 'light';
+      }
+    } catch (error) {}
+  </script>
 
   <!--
     - favicon
@@ -15,7 +24,7 @@
   <!--
     - custom css link
   -->
-  <link rel="stylesheet" href="./assets/css/style.css?v=20260711-10">
+  <link rel="stylesheet" href="./assets/css/style.css?v=20260715-1">
 
   <!--
     - google font link
@@ -26,6 +35,11 @@
 </head>
 
 <body>
+
+  <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to light mode" aria-pressed="false">
+    <ion-icon class="theme-toggle__sun" name="sunny-outline" aria-hidden="true"></ion-icon>
+    <ion-icon class="theme-toggle__moon" name="moon-outline" aria-hidden="true"></ion-icon>
+  </button>
 
   <!--
     - #MAIN
@@ -841,6 +855,7 @@
     - custom js link
   -->
   <!-- <script src="./assets/js/script.js"></script>  -->
+  <script src="./assets/js/theme.js"></script>
 
   <!--
     - ionicon link
