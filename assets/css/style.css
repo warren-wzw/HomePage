@@ -126,13 +126,13 @@
   ), #ffffff;
   --bg-gradient-yellow-1: linear-gradient(
     to bottom right,
-    #3b82f6 0%,
-    rgba(37, 99, 235, 0.14) 58%
+    #294f75 0%,
+    rgba(30, 58, 95, 0.14) 58%
   );
   --bg-gradient-yellow-2: linear-gradient(
     135deg,
-    rgba(59, 130, 246, 0.15) 0%,
-    rgba(37, 99, 235, 0) 59.86%
+    rgba(255, 118, 117, 0.16) 0%,
+    rgba(255, 118, 117, 0) 59.86%
   ), #ffffff;
   --border-gradient-onyx: linear-gradient(
     to bottom right,
@@ -141,8 +141,8 @@
   );
   --text-gradient-yellow: linear-gradient(
     to right,
-    #2563eb,
-    #60a5fa
+    #ff7675,
+    #ff9b9a
   );
   --jet: #dfe5ec;
   --onyx: #f1f5f9;
@@ -151,11 +151,11 @@
   --smoky-black: #f6f7f9;
   --white-1: #0f172a;
   --white-2: #111827;
-  --orange-yellow-crayola: #2563eb;
-  --vegas-gold: #2563eb;
+  --orange-yellow-crayola: #1e3a5f;
+  --vegas-gold: #d95757;
   --light-gray: #475569;
   --light-gray-70: rgba(71, 85, 105, 0.72);
-  --link-accent: #2563eb;
+  --link-accent: #ff7675;
   --navbar-bg: rgba(255, 255, 255, 0.92);
   --shadow-1: 0 8px 24px rgba(15, 23, 42, 0.06);
   --shadow-2: 0 12px 28px rgba(15, 23, 42, 0.08);
@@ -251,9 +251,9 @@ body {
 
 [data-theme="light"] .theme-toggle {
   color: #ffffff;
-  background: #2563eb;
-  border-color: #2563eb;
-  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.24);
+  background: #1e3a5f;
+  border-color: #1e3a5f;
+  box-shadow: 0 8px 20px rgba(30, 58, 95, 0.24);
 }
 
 [data-theme="light"] [style*="color:#ffffff"],
